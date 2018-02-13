@@ -33,3 +33,9 @@ RUN cd /root && git clone http://gitlab.com/ezlab/busco && cp busco/*.py /usr/bi
 
 # make python3 the default python
 RUN ln -s /usr/bin/python3 /usr/bin/python
+
+WORKDIR /data
+
+ENTRYPOINT ["BUSCO.py"]
+
+CMD ["--help"]
